@@ -1,0 +1,9 @@
+- The galaxy 2P correlation function is well fit with a power law:$$\xi(r) = \left(\frac{r}{r_0}\right)^{-\gamma}$$ on scales $r \leq 20 h^{-1}Mpc$, with comoving correlation length $r_0\sim5h^{-1}Mpc$ and slope $\gamma \sim 1.8$. 
+- Quasars are interpreted as a strochastic process through which every luminous galaxy passes, and therefore the clustering of quasars should be no different from that of luminous galaxies.
+- Paper presents the correlation function of high redshift$(z \geq 2.9)$ quasars using the fifth data release of the SDSS, containing 6,000 quasars.
+- Redshift space correlation function[Landy & Szalay(1993)]$$\xi(s) = \frac{\langle DD\rangle - 2\langle DR \rangle + \langle RR \rangle}{\langle RR\rangle}$$
+- Myunderstanding: A histogram of redshift seperation between each of the data points in Data catalogue, Random catalogue and cross seperation between data and random catalogue is made. $\langle DD\rangle$ is the normalised number of data points in the bin with redshift $s$. 
+- Bootstrap, Jackknife and Poisson estimator can be used to estimate the error. Jackknife and Poisson is used in this paper.
+- **Jackknife**:  10 spatially contiguous subsambles are made from the data sets and jackknife samples are created by omitting each of these samples in turn and mean of the number of data points in bin $s$ for each jackknife samble is taken as $DD_{mean}$, used in place of $\langle DD \rangle$. Covaraince matrix is calculated as,$$Cov(\xi_i,\xi_j) = \frac{N-1}{N}\sum^N_{l=1} (\xi_i^l - \bar\xi_i)(\xi_j^l - \bar\xi_j)$$
+- Quasar spacial density,$$\Phi(z) = \int_{M_min}^\infty dM\frac{t_Q}{t_H(M, z)}n(M,z)$$
+- 

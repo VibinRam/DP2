@@ -1,0 +1,3 @@
+- Matter power spectrum is the fourier transform of autocorrelation function.
+- correlation function given by$$\xi (r)=\langle \delta (\mathbf {x} )\delta (\mathbf {x} ')\rangle ={\frac {1}{V}}\int d^{3}\mathbf {x} \,\delta (\mathbf {x} )\delta (\mathbf {x} -\mathbf {r} )$$
+- 

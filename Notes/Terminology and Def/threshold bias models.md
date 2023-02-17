@@ -1,0 +1,1 @@
+There is a hypothesis, that the fractional density contrast $\delta(r) = \frac{ \rho(r) - \langle \rho \rangle }{\langle \rho \rangle}$ for galaxies is proportional to that of DM called linear bias model: $$\delta_{gal} = b\delta_{DM}$$ 

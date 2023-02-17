@@ -1,0 +1,7 @@
+- we have a probability distribution $f(x)$ with properties $f(x) \geq 0$ and $\int f(x) dx = 1$
+- We are interested in finding some statistics which is a function of $f(x)$, eg. $\int x f(x) dx$, the mean.
+- Now we don't know the probability distribution, instead we have some sample form the distribution.
+- The question is how to find the statistic we want from sample that we have.
+- An estimator is some algorithm or operation that we can apply on our sample to obtain this statistic of interest.
+- Now the bias of an estimator is the the difference between this estimator's expected value and the true value.
+- 

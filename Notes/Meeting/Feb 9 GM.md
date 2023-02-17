@@ -1,0 +1,3 @@
+- Discussed paper "ALMA reveals a large overdensity and strong clustering of galaxies in quasar environment at $z\sim4$." [Garcia-vergara et al. 2022]
+- Shadab expressing doubts about the search volume with $\delta\nu = 1000 kms^{-1}$. Massive galaxy can have larger velocity distributions, hence could span larger volume in the redshift space than the other things in the halo.
+- Also something about degeneracy between duty cycle and luminosity. Ask Shadab.

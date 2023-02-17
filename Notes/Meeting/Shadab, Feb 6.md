@@ -1,0 +1,8 @@
+- Does work on Galaxy cluster, autocorrelation function and cross correlation with quasars
+- Quasar determination from photometric data
+- Redshift space distortion. How to deduce peculiar velocity of galaxies.
+- Worked on SDSS data.
+- Galaxy redshift surveys.
+- Did work on quasars from University of Edinburgh
+- Galaxy shape distortion by lensing gives dark matter distribution, host halo properties.
+- Isotropy and homogenity of the universe demands the clustering along line of sight and perpendicular to line of sight to be the same.
