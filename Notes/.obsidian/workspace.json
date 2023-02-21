@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "112b9c98f5df69c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper reading/Quasar clustering.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9523318550b6d5ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper reading/Quasar clustering z_6 Greiner.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Full Stack/C++.md",
+                "file": "Paper reading/Quasar clustering z_6 Greiner.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Full Stack/C++.md",
+                "file": "Paper reading/Quasar clustering z_6 Greiner.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Full Stack/C++.md"
+                "file": "Paper reading/Quasar clustering z_6 Greiner.md"
               }
             }
           }
@@ -146,6 +171,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f8607696367e80e5",
-  "lastOpenFiles": []
+  "active": "9523318550b6d5ed",
+  "lastOpenFiles": [
+    "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+    "Points to ponder.md",
+    "Paper reading/Quasar clustering.md",
+    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+    "Group meeting Papers/DESI z geq 5. 400 new quasars..md",
+    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
+    "Paper reading/LSST science book sec.10.3.md",
+    "Paper reading/Quasar clustering z_6 Greiner.md",
+    "Paper reading/Pan-STARRS1.md",
+    "Full Stack/C++.md"
+  ]
 }
