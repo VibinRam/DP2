@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper reading/Quasar clustering z_6 Greiner.md",
+                "file": "PS1 data retrieval.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper reading/Quasar clustering z_6 Greiner.md",
+                "file": "PS1 data retrieval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper reading/Quasar clustering z_6 Greiner.md",
+                "file": "PS1 data retrieval.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper reading/Quasar clustering z_6 Greiner.md"
+                "file": "PS1 data retrieval.md"
               }
             }
           }
@@ -173,15 +173,15 @@
   },
   "active": "9523318550b6d5ed",
   "lastOpenFiles": [
+    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
+    "PS1 data retrieval.md",
     "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+    "Paper reading/Quasar clustering z_6 Greiner.md",
     "Points to ponder.md",
     "Paper reading/Quasar clustering.md",
     "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Group meeting Papers/DESI z geq 5. 400 new quasars..md",
-    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
     "Paper reading/LSST science book sec.10.3.md",
-    "Paper reading/Quasar clustering z_6 Greiner.md",
-    "Paper reading/Pan-STARRS1.md",
-    "Full Stack/C++.md"
+    "Paper reading/Pan-STARRS1.md"
   ]
 }

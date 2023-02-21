@@ -14,3 +14,7 @@
 - **qualityFlag** from PS1 ObjectThin table  < 16 means good image.
 
 - **fGetNearbyObjEq( ra, dec, radius in arc sec)** will return a table of all the objects in a radius mention within the ra and dec given.
+
+
+- The Extremely Luminous Quasar Survey in the Pan-STARRS 1 Footprint (PS-ELQS)([2019](https://iopscience.iop.org/article/10.3847/1538-4365/ab20d0)) 
+	- Has a machine readable cds file that contains the PS1-ELQS footprint. 592 Quasars.
