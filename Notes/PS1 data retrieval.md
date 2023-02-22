@@ -64,7 +64,7 @@ hp.mollview(all_pixels)
 
 - `ang2pix` - return the pixel, the angle is included in.
 - `nside2npix` - returns the number of pixels from nside.
-- `mollvie` - plots a molleweide projection of the pixels.
+- `mollview` - plots a molleweide projection of the pixels.
 
 ![[Pasted image 20230221172656.png]]pixels corresponding to PS1-ELQS quasars. Level = 6. 
 
