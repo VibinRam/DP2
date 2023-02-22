@@ -1,2 +1,3 @@
 - Are they using Machine learning for target selection from photometry?
 - Are they using ML for quasar identification from the spectrum?
+- Has quasar spectrum been studied to find the best color-color selection function?
