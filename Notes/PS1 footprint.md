@@ -1,3 +1,6 @@
+- Ref [Schindler et al 2019](https://iopscience.iop.org/article/10.3847/1538-4365/ab20d0) , [Jiang et al. 2016](https://iopscience.iop.org/article/10.3847/1538-4357/833/2/222)
+
+
 ![[apjsab20d0f1_lr.jpg]]
 - Footprint is essentially the effective area of the sky included in the survey. It depends on the imaging survey geometry, missing data, existence of very bright stars and so on. Jiang et al. 2016 (sec 4.2). 
 - An example of footprint is shown in grey in the above image.

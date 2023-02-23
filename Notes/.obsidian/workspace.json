@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+                "file": "PS1 data retrieval.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+                "file": "PS1 data retrieval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+                "file": "PS1 data retrieval.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper reading/Laurent Clustering SDSS_IV eBOSS.md"
+                "file": "PS1 data retrieval.md"
               }
             }
           }
@@ -185,15 +185,15 @@
   },
   "active": "dab38c4799bbaf9c",
   "lastOpenFiles": [
-    "Paper reading/LSST science book sec.10.3.md",
-    "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
     "PS1 footprint.md",
     "PS1 data retrieval.md",
+    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
+    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+    "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+    "Paper reading/LSST science book sec.10.3.md",
     "Points to ponder.md",
     "Steps to finding clustering.md",
-    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
     "Paper reading/Quasar clustering z_6 Greiner.md",
-    "Paper reading/Quasar clustering.md",
-    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md"
+    "Paper reading/Quasar clustering.md"
   ]
 }
