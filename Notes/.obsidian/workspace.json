@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PS1 data retrieval.md",
+                "file": "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PS1 data retrieval.md",
+                "file": "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PS1 data retrieval.md",
+                "file": "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PS1 data retrieval.md"
+                "file": "Paper reading/Laurent Clustering SDSS_IV eBOSS.md"
               }
             }
           }
@@ -185,11 +185,11 @@
   },
   "active": "dab38c4799bbaf9c",
   "lastOpenFiles": [
-    "PS1 footprint.md",
-    "PS1 data retrieval.md",
     "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
-    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+    "PS1 data retrieval.md",
+    "PS1 footprint.md",
     "Paper reading/LSST science book sec.10.3.md",
     "Points to ponder.md",
     "Steps to finding clustering.md",

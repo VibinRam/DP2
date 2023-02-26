@@ -1,5 +1,8 @@
 - From the [paper](https://ui.adsabs.harvard.edu/abs/2017JCAP...07..017L/abstract)
 
+### Questions
+- Are they not finding the completeness of the selection process from target to observed? not targeting process itself!!
+
 ### Introduction
 - Influence of baryons on galaxy clustering.
 - Baryon driver fluctuation in matter power spectrum as a standard ruler.
@@ -38,7 +41,7 @@
 - But there are overlapping plates too.
 
 ### Analysis
-#### Computing $\xi(r)$ 
+##### Computing $\xi(r)$ 
 - Limited number of fibers are there, so all targets cannot be observed.
 - Density of eBOSS targets is not homogeneous, therefore probability to observe is not homogeneous.
 - Targets are more likely to be observed where plates overlap.
@@ -48,7 +51,21 @@
 	- $N_{targets}$ - total number of targets. 
 	- $N_{known}$ - number of targets that have already been observed by the SDSS I, II and BOSS surveys.
 	- $N_{col}$ - number of targets that were not observed because they are colliding with another quasar.
-- 
+- $N_{known}$ appears with minus sign in the dinominator because the completeness of known targets is 1 by definition and adding it will skew the completeness of the unknown targets.
+- $N_{col}$ appears in the numerator inorder to account for the fact that when we decide to observe a target, the probability of observing the colliding targets goes to zero by default. It is a limitation in the design.
+- They also include the known targets in their analysis, but only with a selection probabilty proportional to the completeness of the polygon.
+- Using this completeness a 'catalog of $10^7$ object with 'random' angular position is made with number of objects in each polygon proportional to the area and completeness of the polylgon.
+- Each random object is then assigned a redshift drawn from the distribution $n(z)$.
+- Then correlation is calculated from Landy-Szalay estimator.
+
+##### Estimation of Statistical uncertainitly
+- Covariance matrix of correlation function is found from the bootstrap resampling method.
+- Each galactic cap is partitioned into 201 bootstrap cells.
+- 201 cells is drawn with replacement from these partitioning to get a bootstrap realisation.
+- $\xi(r)$ is measured from each of the 10,000 realisations, and covariance matrix is calculated.
+- Covariance matrix is also found from 100 QPM (Quick Particle Mesh is an Nbody simulation for large-scale structure of the universe) mocks.
+- These mocks are inaccurate at smaller scales.
+- Fig. 3. and 4. gives the covariance matrix and their comparisons.
 
 ### Conclusion
 - Main contribution to systematics is the **inhomogeneities in the target selection**.
