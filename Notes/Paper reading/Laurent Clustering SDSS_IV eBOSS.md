@@ -67,6 +67,35 @@
 - These mocks are inaccurate at smaller scales.
 - Fig. 3. and 4. gives the covariance matrix and their comparisons.
 
+### Systematic effects
+##### Inhomogeneities of target identification
+- Efficiency of target identification is better for visual inspection than pipeline.
+- Efficiency depends on the signal to ration, which inturn depends on the positioning of the fibre. $n_{ID}$
+- Fibres at the edge ($n_{ID}$ near 0, 500, 1000) have less S/N ration.
+- Fig. 5. shows this effect.
+- Effect can be modeled using hyperbolic cosine with 3 free parameters, $$ \frac{N_{QSO}}{N_{fibres}}(n_{ID}) = -a \cosh \left(\frac{n_{ID} \hspace{0.1cm}\text{mod}\hspace{0.1cm} 500 - 250}{b}\right)^2 + c$$
+- Inverse of this is used as a weight for the new eBOSS quasars. For known quasars for which this is not available, inverse of mean is used, to account for difference in efficiency.
+
+#### Inhomogeneities of quasar target selection
+- Variations of observed quasar density with depth and its inputs (seeing, airmass, extinction and sky-flux) and also with sky density (blending effect) is shown in Fig. 6.
+- Healpix map for the above quantity is generated with $N_{side} = 256$. As per procedure of [Ross et al. 2012].
+- Ratio of number of observed quasars to the normalized number of random objects is proportional to the observed quasar density corrected for the completness.
+- No bias in the target selection due to blending is seen.
+- Final systematic weights for target selection inhomogeneity are obtained by multiplying the depth and Galactic-extinction weights.
+
+##### Effect of weightings on $\xi(r)$
+- Fig. 7 shows the effect of various weights for correcting systematic effects.
+- cross-$\chi^2$ between $\xi_N(r)$ and $\xi_S(r)$ (NGC and SGC)$$\chi_{NS}^2 = \sum_{ij}(\xi_N(r_i) - \xi_S(r_i))C_{ij}^{-1}(\xi_N(r_j) - \xi_S(r_j))$$where C is the sum of $C_N$ and $C_S$, the covariance matrices of $\xi_N(r)$ and $\xi_S(r)$. Table. 1 shows the result for various weighting schemes.
+
+##### Measurement of quasar bias
+- From flat $\Lambda$CDM model, with parameter same as BOSS 12th data release, CAMB and HALOFIT provide a non-linear matter power spectrum $P_{mat}(k)$. 
+- Linear redshift distortion accounted for using the Kaiser formula.
+- $$P_Q(k,\mu) = b_Q^2(1 + \beta \mu_k^2)^2 P_{mat}(k)$$$\mu_k$ is the cosine of the angle between $k$ and the line of sight, $\beta = f/b_Q$, and $f\simeq \Omega_m^{0.55}(z)$ is the growth rate of structure.
+- Now $P_Q(k)$ is converted into $\xi_Q(r)$.
+- Fits of $b_Q$ are performed using the MINUIT libraries over the range $10 < r < 85h^{-1}Mpc$.
+- 
+
+
 ### Conclusion
 - Main contribution to systematics is the **inhomogeneities in the target selection**.
 - Provides weighting scheme?

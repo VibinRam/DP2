@@ -37,3 +37,5 @@
 
 - Can be accessed from python via Astropy-affiliated Python package PyVO[.https://irsa.ipac.caltech.edu/docs/program_interface/astropy_TAP.html]
 
+- **fGetNearestObjEq** inbuilt function that exist in the MAST casjobs is the key to our problem. Keyword - **Cursors and Table-valued Functions** . [See](https://galex.stsci.edu/casjobs/aqueries.aspx#cursors) 
+
