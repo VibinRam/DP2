@@ -93,6 +93,14 @@
 - $$P_Q(k,\mu) = b_Q^2(1 + \beta \mu_k^2)^2 P_{mat}(k)$$$\mu_k$ is the cosine of the angle between $k$ and the line of sight, $\beta = f/b_Q$, and $f\simeq \Omega_m^{0.55}(z)$ is the growth rate of structure.
 - Now $P_Q(k)$ is converted into $\xi_Q(r)$.
 - Fits of $b_Q$ are performed using the MINUIT libraries over the range $10 < r < 85h^{-1}Mpc$.
+- $$\xi_{QSO}(s)/\xi_{mat}(r) = b_Q^2(1 + \frac{2}{3}\beta + \frac{1}{5}\beta)$$where we have used $\xi(s) = \xi(r)(1 + \frac{2}{3}\beta + \frac{1}{5}\beta)$ from [Kaiser 1987].
+- Measurement of $b_Q$ are not sensitive to the range of the fit. Fig. 8.
+- $b_Q(z) = \alpha[(1+z)^2 - 6.565)] + \beta$, empirical formual obtained from [Croom et al. 2005]. $\alpha = 0.278 \pm 0.018$, $\beta = 2.393 \pm 0.042$ and $\rho_{\alpha,\beta} = 0$.
+
+##### Characteristic Halo Mass
+- $\bar M_h$ is the characteristic halo mass that corresponds to the measured clustering bias, $b(\bar M_h) = b_Q$.
+- $M_{h,min}$ is the minimum halo mass that bounds the range of haloes that correspond to the observed clustering bias, $$b(M > M_{h,min}) \equiv \frac{\int_{M_{h,min}}^\infty \frac{dn}{dM}b(M)dM}{\int_{M_{h,min}}^\infty \frac{dn}{dM} dM}$$where $\frac{dn}{dM}$ is the halo abundance determined by Tinker et al. 2008. 
+- How quasar clustering varies with luminosity appears to be a subtle effect.
 - 
 
 

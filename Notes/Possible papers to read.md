@@ -1,0 +1,3 @@
+- The Extremely Luminous Quasar Survey in the Pan-STARRS 1 Footprint (PS-ELQS), 2019[.]([The Extremely Luminous Quasar Survey in the Pan-STARRS 1 Footprint (PS-ELQS) - IOPscience](https://iopscience.iop.org/article/10.3847/1538-4365/ab20d0))
+- The 2dF QSO Redshift Survey - XIV. Structure and evolution from the two-point correlation function. 2005[.]([The 2dF QSO Redshift Survey - XIV. Structure and evolution from the two-point correlation function - NASA/ADS (harvard.edu)](https://ui.adsabs.harvard.edu/abs/2005MNRAS.356..415C/abstract))
+- 
