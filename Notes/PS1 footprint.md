@@ -11,12 +11,18 @@
 
 - HEALPix is a Hierarchical Equal Area, and IsoLatitude Pixelisation of the sphere. Basically it pixelates the sphere.![[Pasted image 20230221173137.png]]
 
+- **healpy** is a python implementation of HEALPix library.
+- There is another implementation associated with astropy, **astropy_healpix**
+
 - Coordinate system used for mollewide in healpy : Standard coordinates are the colatitude $\theta$, 0 at the North Pole, $\pi/2$ at the equator and $\pi$ at the South Pole and the longitude $\phi$ between 0 and $2\pi$ eastward, in a Mollview projection, $\phi = 0$ is at the center and increases toward the left of the map.
 
 - In level 0, the sphere is devided into 12 pixels of equal area. In the subsequent levels this goes as $N_{pixels} = 12 \times 4^{lvl}$.
 - In healpy, the parameter determining the number of pixels and thereby resolution is $N_{side}$. And $N_{side} = 2^{lvl}$.
 
 ```python
+import numpy as np
+import healpy as hp
+
 level = 6
 
 nside = 2 ** level

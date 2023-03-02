@@ -39,3 +39,5 @@
 
 - **fGetNearestObjEq** inbuilt function that exist in the MAST casjobs is the key to our problem. Keyword - **Cursors and Table-valued Functions** . [See](https://galex.stsci.edu/casjobs/aqueries.aspx#cursors) 
 
+- **astroquery** package has **astroquery.ipac.irsa** with **Irsa** class. This let us import all the catalogs from irsa (infrared science archive), including 2MASS and AllWISE. (_but doesn't seems to have a sql type query with condition feature_)
+

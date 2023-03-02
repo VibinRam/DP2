@@ -14,6 +14,7 @@ From the paper: The Pan-STARRS1 z > 5.6 Quasar Survey. III. The  z $\approx$ 6 Q
 - Shindler has papers on Extremely Luminous Quasar Survey for both Pan-STARRS 1 and SDSS
 	- The Extremely Luminous Quasar Survey in the Pan-STARRS 1 Footprint (PS-ELQS)([2019](https://iopscience.iop.org/article/10.3847/1538-4365/ab20d0))
 	- The Extremely Luminous Quasar Survey in the SDSS Footprint. I. Infrared-based Candidate Selection([2017](https://iopscience.iop.org/article/10.3847/1538-4357/aa9929)) 
+- Schindler is making a new research group at Hamburg observatory focusing on quasars in early universe.
 
 #### Abstract and Introduction 
 
