@@ -98,9 +98,20 @@
 - $b_Q(z) = \alpha[(1+z)^2 - 6.565)] + \beta$, empirical formual obtained from [Croom et al. 2005]. $\alpha = 0.278 \pm 0.018$, $\beta = 2.393 \pm 0.042$ and $\rho_{\alpha,\beta} = 0$.
 
 ##### Characteristic Halo Mass
-- $\bar M_h$ is the characteristic halo mass that corresponds to the measured clustering bias, $b(\bar M_h) = b_Q$.
+- $\bar M_h$ is the characteristic halo mass that corresponds to the measured clustering bias, $b(\bar M_h) = b_Q$
+- Fig. 10 shows the characteristic and minimum halo masses, for full sample and subsamples with redshift.
 - $M_{h,min}$ is the minimum halo mass that bounds the range of haloes that correspond to the observed clustering bias, $$b(M > M_{h,min}) \equiv \frac{\int_{M_{h,min}}^\infty \frac{dn}{dM}b(M)dM}{\int_{M_{h,min}}^\infty \frac{dn}{dM} dM}$$where $\frac{dn}{dM}$ is the halo abundance determined by Tinker et al. 2008. 
 - How quasar clustering varies with luminosity appears to be a subtle effect.
+- Confidence interval in Fig. 10 is obtained from a projection from confidence interval of $b_Q$ at average redshift to halo masses via the above equation.
+- Possibility of a sharp change in host halo mass of low and high reshift quasars.
+- Constant bias with redshift causes the characteristic mass of the average halo to dwindle (current work), and increasing bias causes the characteristic mass to be constant ([Eftekharzadeh et al.] seen in Fig. 10).
+- Structure has had less time to grow at higher redshift, hence increasing bias will offset this.
+
+##### Duty cycle
+- $$f_{duty} = \frac{\int_{L_{min}}^{L_{max}}\Phi(L)dL}{\int_{M_{h,min}}^\infty \frac{dn}{dM}dM}$$
+- Since we are integrating over all masses from $M_{h,min}$ to $\infty$, we implicitly assume extremely weak relationship between halo mass and luminosity.
+- QLF adopted from [Palanque-Delabrouille et al. 2016]
+- Error on $f_{duty}$ is calculated by taking the quasar bias from a Gaussian corresponding to the 68% confidence interval around our measured $\pm 1\sigma$ errors on $b_Q$ and find the implied $\pm 1\sigma$ error in $f_{duty}$. Fig. 11.
 - 
 
 
