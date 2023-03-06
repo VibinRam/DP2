@@ -8,31 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f8607696367e80e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Full Stack/C++.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "112b9c98f5df69c4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper reading/Quasar clustering.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9523318550b6d5ed",
+            "id": "dab38c4799bbaf9c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -44,19 +20,19 @@
             }
           },
           {
-            "id": "dab38c4799bbaf9c",
+            "id": "b8d780e70d3b0e30",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+                "file": "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+                "file": "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+                "file": "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md"
+                "file": "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md"
               }
             }
           }
@@ -183,22 +159,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dab38c4799bbaf9c",
+  "active": "b8d780e70d3b0e30",
   "lastOpenFiles": [
-    "PS1 data retrieval.md",
-    "Paper reading/Banados_ps1_z_5.6_Q_survey.md",
-    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
-    "PS1 footprint.md",
-    "Paper reading/Pan-STARRS1.md",
     "Group meeting Papers/DESI z geq 5. 400 new quasars..md",
-    "Paper reading/Quasar clustering z_6 Greiner.md",
     "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+    "Paper reading/Pan-STARRS1.md",
+    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
+    "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
+    "Paper reading/Quasar clustering z_6 Greiner.md",
+    "Points to ponder.md",
+    "PS1 data retrieval.md",
     "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+    "Paper reading/Banados_ps1_z_5.6_Q_survey.md",
+    "PS1 footprint.md",
     "Possible papers to read.md",
     "Paper draft/Introduction.md",
     "Paper draft",
     "Paper reading/LSST science book sec.10.3.md",
-    "Points to ponder.md",
     "Steps to finding clustering.md",
     "Paper reading/Quasar clustering.md"
   ]

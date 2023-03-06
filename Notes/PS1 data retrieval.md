@@ -20,6 +20,8 @@
 
 - The Extremely Luminous Quasar Survey in the Pan-STARRS 1 Footprint (PS-ELQS)([2019](https://iopscience.iop.org/article/10.3847/1538-4365/ab20d0)) 
 	- Has a machine readable cds file that contains the PS1-ELQS footprint. 592 Quasars.
+- Banados et al. 2016 has a catalog of all known quasars at $z > 5.6$ as of the end of 2016 march.
+	- 173 quasars in total.
 
 #### 2MASS and AII WISE catalogues
 
@@ -41,3 +43,6 @@
 
 - **astroquery** package has **astroquery.ipac.irsa** with **Irsa** class. This let us import all the catalogs from irsa (infrared science archive), including 2MASS and AllWISE. (_but doesn't seems to have a sql type query with condition feature_)
 
+- AIIWISE catalog itself has 2MASS photometry for the cross matched point source.
+
+- 
