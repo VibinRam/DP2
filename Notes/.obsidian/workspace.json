@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
+                "file": "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
+                "file": "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
+                "file": "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md"
+                "file": "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md"
               }
             }
           }
@@ -161,18 +161,19 @@
   },
   "active": "b8d780e70d3b0e30",
   "lastOpenFiles": [
-    "Group meeting Papers/DESI z geq 5. 400 new quasars..md",
-    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
-    "Paper reading/Pan-STARRS1.md",
-    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
-    "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
-    "Paper reading/Quasar clustering z_6 Greiner.md",
-    "Points to ponder.md",
-    "PS1 data retrieval.md",
     "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
+    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+    "PS1 data retrieval.md",
+    "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
+    "Points to ponder.md",
+    "Possible papers to read.md",
+    "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
+    "Group meeting Papers/DESI z geq 5. 400 new quasars..md",
+    "Paper reading/Pan-STARRS1.md",
+    "Paper reading/Quasar clustering z_6 Greiner.md",
     "Paper reading/Banados_ps1_z_5.6_Q_survey.md",
     "PS1 footprint.md",
-    "Possible papers to read.md",
     "Paper draft/Introduction.md",
     "Paper draft",
     "Paper reading/LSST science book sec.10.3.md",
