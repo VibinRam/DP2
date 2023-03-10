@@ -40,6 +40,20 @@ From the paper: The Pan-STARRS1 z > 5.6 Quasar Survey. III. The  z $\approx$ 6 Q
 - They uses selection strategy of and discoveries from the PS1 distant quasar survey [Banados et al. 2014, 2016, 2022].
 - Quasar sample has 125 from PS1 and 48 lower luminosity quasars from SHELLQs [Matsuoka et al. 2018].
 
+#### Quasar candidate selection
+- Used PS1 PV2 catalog. It is an internal data release.
+- Photometric quality selection: 
+	- exclude sources that have been flagged as suspicious by the Imaging Processing Pipeline
+	- require 85% of the normalized PSF flux in the _$i_{P1}$_, $z_{P1}$, and $y_{P1}$ bands to be located in unmasked pixels (PSF_QF > 0.85).
+- $|b| < 20^o$ excluded for the galactic plane.
+- Only sources with modest degrees of galactic reddening is selected, determined from the [Schlegel et al. 1998] dust map. $E(B - V) < 0.3$ is the extinction selection criterion.
+- Sources around M31 is excluded. $7^o < R. A. , 14^o$;  $37^o < decl. < 43^o$ . Inclusion results in a large number of candidates which are most likely stars associated with M31.
+- Quasar selection get contaminants from M, L, T dwarf stars (or brown dwarfs) also low-redshift galaxies, which appear extended in PS1 seeing conditions. Eliminated using "morphology criterion" ([Banados et al. 2016]).
+	- absolute difference between the aperture and PSF magnitudes is below a value of 0.3 in either PS1 z or y band. $|f_{ext,z}| < 0.3$ OR $|f_{ext,y}| < 0.3$.
+	- Removes 92% of galaxies while retaining 92% of stars and 97% of quasars.
+- At $5.7 \lesssim z \lesssim 6.2$ quasars can be differentiated from brown dwarfs by applying the following selection criteria, [Banados et al. 2014] $$S/N_{z_{P1}} > 10$$ $$S/N_{y_{P1}} > 5$$ $$(z_{P1} - y_{P1}) < 0.5$$ $$((S/N_{i_{P1}} \geqslant 3 \hspace{0.3 cm}\text{AND}\hspace{0.3cm} (i_{P1} - z_{P1}) > 2.0) \hspace{0.3cm} \text{OR} \hspace{0.3cm} (S/N_{i_{P1}} < 3 \hspace{0.3cm} AND \hspace{0.3cm} (i_{P1, lim} - z_{P1} >2.0))$$ $$(S/N_{r_{P1}} < 3 \hspace{0.3cm} \text{OR} \hspace{0.3cm} (r_{P1} - z_{P1}) > 2.2)$$ $$S/N_{g_{P1}} < 3$$applied to stack dereddened PS1 magnitudes.
+- 
+
 #### Results
 - 48 quasars from SHELLQs quasar sample presented in [Matsuoka et al. 2018] is included. Their selection function is used.
 ###### Binned QLF

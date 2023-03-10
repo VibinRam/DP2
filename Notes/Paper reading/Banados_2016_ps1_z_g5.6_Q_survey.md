@@ -13,4 +13,12 @@
 #### Introduction
 - Short and crisp
 - First $z > 5.6$ quasars were discovered by [Fan et al. 2000].
+
+#### Rest-frame $1450 \overset{\circ}{A}$ magnitudes
+- $1450 \overset{\circ}{A}$ is important for the estimation of QLF
+- shifted to observed wavelength > $9570 \overset{\circ}{A}$, out of optical
+- We can extrapolate to $1450 \overset{\circ}{A}$ from $y_{p1}$ and J bands, using the continuum equation $f_\nu = C \times \nu^{\alpha_\nu}$ .
+- $\alpha_\nu = -0.3$ is used.
+- It is possible that $y_{p1}$ is contaminated with Si IV + O IV], but contribution to magnitude will only be less than $\sim 10 \%$
+- At $z \geqslant 6.3$ Ly$\alpha$ and N V might contaminate the band significantly. Therefore J band is used upto $z \sim 7$.
 - 
