@@ -5,4 +5,6 @@
 >			\~ [Schindler et al. 2019]
 - Has quasar spectrum been studied to find the best color-color selection function?
 - Are there correaltions between various emission and absorption lines of the quasar spectrum?
-- 
+
+
+- Why x-ray survey cannot be conducted for high redshifts?

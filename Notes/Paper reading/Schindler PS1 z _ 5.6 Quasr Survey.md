@@ -52,7 +52,13 @@ From the paper: The Pan-STARRS1 z > 5.6 Quasar Survey. III. The  z $\approx$ 6 Q
 	- absolute difference between the aperture and PSF magnitudes is below a value of 0.3 in either PS1 z or y band. $|f_{ext,z}| < 0.3$ OR $|f_{ext,y}| < 0.3$.
 	- Removes 92% of galaxies while retaining 92% of stars and 97% of quasars.
 - At $5.7 \lesssim z \lesssim 6.2$ quasars can be differentiated from brown dwarfs by applying the following selection criteria, [Banados et al. 2014] $$S/N_{z_{P1}} > 10$$ $$S/N_{y_{P1}} > 5$$ $$(z_{P1} - y_{P1}) < 0.5$$ $$((S/N_{i_{P1}} \geqslant 3 \hspace{0.3 cm}\text{AND}\hspace{0.3cm} (i_{P1} - z_{P1}) > 2.0) \hspace{0.3cm} \text{OR} \hspace{0.3cm} (S/N_{i_{P1}} < 3 \hspace{0.3cm} AND \hspace{0.3cm} (i_{P1, lim} - z_{P1} >2.0))$$ $$(S/N_{r_{P1}} < 3 \hspace{0.3cm} \text{OR} \hspace{0.3cm} (r_{P1} - z_{P1}) > 2.2)$$ $$S/N_{g_{P1}} < 3$$applied to stack dereddened PS1 magnitudes.
+- Forced photometry is performed on the PS1 stacked and single-epoch images. [Section 2.2 and 2.3 in Banados et al 2014]. Remove all sources where the forced photometry is inconsistent with the reported values in the PS1 PV2 catalog.
+- 1032 candidates survived is visualy inspected by Banados and Schindler and a ranking from 1 to 4 is given independently. Final catalogue includes 640 sources with 2, 3 and 4 summed rank.
+- Identification efficiency,$$EFF_{ID} = \frac{N_{CQ}}{N_{CQ} + N_{RC}}$$
+- Identification completeness, $$S_{ID} = \frac{N_{CQ}}{N_{CQ} + EFF_{ID} \times N_{NoID}}$$
+- To avoid biases in completeness of different ranks, they calculate the expected number of quasars for each rank seperately, accounting for the different efficiencies of each sample. $$S_{ID} = \frac{N_{CQ}}{N_{CQ} + \sum_{r=2}^4EFF_{ID,r} \times N_{NoID,r}}$$
 - 
+
 
 #### Results
 - 48 quasars from SHELLQs quasar sample presented in [Matsuoka et al. 2018] is included. Their selection function is used.
