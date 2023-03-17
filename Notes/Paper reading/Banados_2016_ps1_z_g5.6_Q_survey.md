@@ -21,4 +21,11 @@
 - $\alpha_\nu = -0.3$ is used.
 - It is possible that $y_{p1}$ is contaminated with Si IV + O IV], but contribution to magnitude will only be less than $\sim 10 \%$
 - At $z \geqslant 6.3$ Ly$\alpha$ and N V might contaminate the band significantly. Therefore J band is used upto $z \sim 7$.
+
+#### Candidate selection
+
+- Main contaminats of quasars at $z \sim 6 - 7$ are brown dwarfs.
+- We ca n see how brown dwarfs are distinguished from quasars in the $i_{P1} - z_{P1}$ vs $z_{P1} - y_{P1}$ color diagram.![[Pasted image 20230317120313.png|600]]
+- This is called the $i$-dropout selection (in detail in [Banados et al. 2014]) 
+- $z$ - dropout selection can be used to seperate quasars at $z \sim 7$ [Veneman et al. (2015a)]
 - 
