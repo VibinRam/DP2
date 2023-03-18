@@ -1,4 +1,4 @@
-From Shen et. al. 2007.
+WeFrom Shen et. al. 2007.
 
 - Sample contains 4,426 luminous optical quasars
 - Redshift $2.9 \leq z \leq 5.4$

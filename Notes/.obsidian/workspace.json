@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PS1 Completeness.md",
+                "file": "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PS1 Completeness.md",
+                "file": "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PS1 Completeness.md",
+                "file": "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PS1 Completeness.md"
+                "file": "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md"
               }
             }
           }
@@ -173,8 +173,11 @@
   },
   "active": "d74ca9d0a80bbd8f",
   "lastOpenFiles": [
-    "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
+    "Paper reading/Pan-STARRS1.md",
+    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+    "Paper reading/Quasar clustering.md",
     "PS1 Completeness.md",
+    "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
     "Images/Pasted image 20230317115611.png",
     "Images/Pasted image 20230317120313.png",
     "Images/Pasted image 20230317150641.png",
@@ -188,8 +191,6 @@
     "Points to ponder.md",
     "Pasted image 20230317115532.png",
     "Paper reading/Quasar clustering z_6 Greiner.md",
-    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
-    "Paper reading/Pan-STARRS1.md",
     "To Do.md",
     "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
     "Possible papers to read.md",
@@ -199,7 +200,6 @@
     "Paper reading/Banados_ps1_z_5.6_Q_survey.md",
     "Paper draft/Introduction.md",
     "Paper draft",
-    "Paper reading/LSST science book sec.10.3.md",
-    "Paper reading/Quasar clustering.md"
+    "Paper reading/LSST science book sec.10.3.md"
   ]
 }
