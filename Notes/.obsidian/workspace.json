@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Steps to finding clustering.md",
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Steps to finding clustering.md",
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Steps to finding clustering.md",
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Steps to finding clustering.md"
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md"
               }
             }
           }
@@ -173,8 +173,8 @@
   },
   "active": "d74ca9d0a80bbd8f",
   "lastOpenFiles": [
-    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Steps to finding clustering.md",
+    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
     "Paper reading/Pan-STARRS1.md",
     "Paper reading/Quasar clustering.md",
