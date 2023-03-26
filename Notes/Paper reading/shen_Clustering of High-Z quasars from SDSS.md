@@ -45,7 +45,7 @@ WeFrom Shen et. al. 2007.
 ### Redshift space correlation function
 
 - Redshift space is where distances are obtained from redshift without any corrections for peculiar velocity of redshift errors.
-- Redshift space correlation function[Landy & Szalay(1993)]$$\xi(s) = \frac{\langle DD\rangle - 2\langle DR \rangle + \langle RR \rangle}{\langle RR\rangle}$$
+- Redshift space correlation function[Landy & Szalay(1993)](https://ui.adsabs.harvard.edu/abs/1993ApJ...412...64L/abstract)$$\xi(s) = \frac{\langle DD\rangle - 2\langle DR \rangle + \langle RR \rangle}{\langle RR\rangle}$$
 - **Jackknife d10**:  10 spatially contiguous subsambles are made from the data sets and jackknife samples are created by omitting each of these samples in turn and mean of the number of data points in bin $s$ for each jackknife samble is taken as $DD_{mean}$, used in place of $\langle DD \rangle$. Covaraince matrix is calculated as,$$Cov(\xi_i,\xi_j) = \frac{N-1}{N}\sum^N_{l=1} (\xi_i^l - \bar\xi_i)(\xi_j^l - \bar\xi_j)$$
 - **Poisson error estimator**: 
 
