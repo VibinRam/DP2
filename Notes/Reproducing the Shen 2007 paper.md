@@ -1,0 +1,8 @@
+- Sample selection:
+	- The quasars observed through the third data release have been logged cataloged by [Schneider et al 2005]
+	- [Schneider et al 2006] extends the catalog to DR5
+	- Paper only looks for clustering on larger scales. Smaller scales on a future paper?
+	- Have taken all quasars from SDSS quasar catalog with $z \geq 2.9$. (3333 in total)
+	- 2,805 quasars added to the sample from plates taken since DR3.
+	- Final sample of 6,109 after rejecting 29 from the above.
+	- 

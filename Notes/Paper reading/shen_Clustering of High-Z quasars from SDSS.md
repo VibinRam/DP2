@@ -53,7 +53,7 @@ WeFrom Shen et. al. 2007.
 
 - Redshift space distortion due to peculiar motion of quasars in the cluster, called **Fingers of God**.![Alt test](https://ned.ipac.caltech.edu/level5/March12/Coil/Figures/figure4.jpg "Fingers of God")
 - Projected correlation function $w_p(r_p)$: $$w_p(r_p) = 2 \int_0^\infty d\pi \xi_s(r_p, \pi)$$ $2$?
-- where, $$\pi = \frac{s\cdot l}{|l|} \hspace{1cm} r_p = \sqrt{s\cdot s - \pi^2}$$
+- where, $$\pi = \frac{s\cdot l}{|l|} \hspace{1cm} r_p = \sqrt{s\cdot s - \pi^2}$$[Fisher et al 1994] originally from coil notes.
 - In practice integration is only upto $\pi_{cutoff} = 100h^{-1}Mpc$. 
 - Now relation between projected correlation function and real space correlation function:$$w_p(r_p) = 2\int_0^\infty dy\xi(\sqrt{r_p^2 + y^2})$$$$w_p(r_p) = 2\int_0^\infty \frac{rdr}{\sqrt{r^2 - r_p^2}}\xi(r)$$Assuming power law $\xi(r) = \left(\frac{r}{r_0}\right)^{-\gamma}$$$w_p(r_p) = r_p\left(\frac{r_o}{r_p}\right)^\gamma \frac{\Gamma(1/2)\Gamma[(\gamma -1)/2]}{\Gamma(\gamma/2)}$$
 - Now angular correlation function can be fitted with this function to obtain $\gamma$ and $r_0$.
