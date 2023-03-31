@@ -1,0 +1,1 @@
+- There is an algorithm given for dividing survey geometry into equal areas to use for jackknife analysis [here](https://ui.adsabs.harvard.edu/abs/2021MNRAS.501.3309Z/abstract) 
