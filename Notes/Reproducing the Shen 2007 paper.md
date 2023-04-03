@@ -5,4 +5,11 @@
 	- Have taken all quasars from SDSS quasar catalog with $z \geq 2.9$. (3333 in total)
 	- 2,805 quasars added to the sample from plates taken since DR3.
 	- Final sample of 6,109 after rejecting 29 from the above.
-	- 
+
+- How to make random catalog is given here[.](https://arxiv.org/pdf/1712.03128.pdf)
+	-  We can take data catalog with 100 times more data points than the signal catalog. Normalisation is necessary in the estimator.
+	- They have only about 1000 quasars in their catalog.
+	- MANGLE software to create the mask of the region containing quasars. random catalog is made in this mask.
+	- They are also combining the survey geometries of more than one surveys.
+- How to divide the survey geometry into equal area regions for jackknife sampling is given here[.](https://ui.adsabs.harvard.edu/abs/2021MNRAS.501.3309Z/abstract)
+	-  Code given here[.](https://github.com/rongpu/pixel_partition)

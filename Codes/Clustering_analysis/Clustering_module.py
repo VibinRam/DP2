@@ -118,7 +118,7 @@ def find_wp_rp_single_bin(ra, dec, red, file_name):
     xi_rp_masked = ma.array(xi_rp)
     xi_rp_masked[unfin_pos] = ma.masked
 
-    file = open(file_name + ".txt", 'w')
+    file = open(DP2_DIRECTORY + "Data/" + file_name + ".txt", 'w')
     file.write('   rp_mid       DD      RR      DR      xi_rp \n')
     for i in range(len(rp_mid)):
         file.write(f'{rp_mid[i]:9.3f}   {rp_hist[i]:5d}    {rand_rp_hist[i]:5d}   {cross_rp_hist[i]:5d}   {xi_rp[i]:8.5f}\n')
@@ -126,8 +126,8 @@ def find_wp_rp_single_bin(ra, dec, red, file_name):
     #xi_rp = np.abs(xi_rp)
     #(rp_hist + rand_rp_hist - 2 * cross_rp_hist)/rand_rp_hist
     fig, ax = plt.subplots()
-    ax.plot(rp_mid, xi_rp_masked, '*--')
-    ax.set_ylabel(r'$w_p(r_p)$')
+    ax.plot(rp_mid, xi_rp_masked/rp_mid, '*--')
+    ax.set_ylabel(r'$w_p(r_p)/r_p$')
     ax.set_xlabel(r'$r_p (Mpc)$')
     ax.axhline(0, ls = '--', lw = 0.5, c = 'black')
 
@@ -155,7 +155,7 @@ def find_xi_s(ra, dec, red, file_name):
     xi_s_masked = ma.array(xi_s)
     xi_s_masked[unfin_pos] = ma.masked
 
-    file = open(file_name + ".txt", 'w')
+    file = open(DP2_DIRECTORY + "Data/" + file_name + ".txt", 'w')
     file.write('   s_mid       DD      RR      DR      xi_s \n')
     for i in range(len(s_mid)):
         file.write(f'{s_mid[i]:9.3f}   {s_hist[i]:5d}    {rand_s_hist[i]:5d}   {cross_s_hist[i]:5d}   {xi_s[i]:8.5f}\n')

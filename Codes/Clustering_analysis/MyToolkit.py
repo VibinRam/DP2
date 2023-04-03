@@ -15,7 +15,7 @@ def range_wrapper(arr):
     arr = -arr
     return arr
 
-def plot_sky_map_ps1(ra, dec, labels, title = "Default title", mask = None):
+def plot_sky_map_ps1(ra, dec, labels, title = "Default title", mask = None, mark_size = 30):
 
     '''Give right ascension in array of decimal degrees (0 deg to 360 deg)
         and declination in array of decimal degrees (-90 deg to 90 deg)'''
@@ -46,13 +46,13 @@ def plot_sky_map_ps1(ra, dec, labels, title = "Default title", mask = None):
     dec_30_dec = np.radians(np.ones(1000) * -30.0)
 
 
-    plt.figure(figsize = (12, 7))
-    ax = plt.subplot(111, projection = "mollweide")
+    fig, ax = plt.subplots(figsize = (12, 7), subplot_kw={'projection': 'mollweide'})
+    #ax = plt.subplot(111, projection = "mollweide")
 
     ### This plots the footprint
-    plt.plot(gal_ra_1, gal_dec_1, color = 'black', linewidth = 1) 
-    plt.plot(gal_ra_2, gal_dec_2, color = 'black', linewidth = 1)
-    plt.plot(dec_30_ra, dec_30_dec, color = 'black', linewidth = 1)
+    ax.plot(gal_ra_1, gal_dec_1, color = 'black', linewidth = 1) 
+    ax.plot(gal_ra_2, gal_dec_2, color = 'black', linewidth = 1)
+    ax.plot(dec_30_ra, dec_30_dec, color = 'black', linewidth = 1)
     #-------------------------------------------------------------------------------------------
     ### Plotting the sources
     ra = np.radians(range_wrapper(ra)) 
@@ -63,14 +63,16 @@ def plot_sky_map_ps1(ra, dec, labels, title = "Default title", mask = None):
         source_pos = np.where(mask[1:] == n_source)
         ra_n, dec_n = ra[source_pos], dec[source_pos]
 
-        plt.scatter(ra_n, dec_n, marker = marker[n_source], label = labels[n_source], s = 30)
+        ax.scatter(ra_n, dec_n, marker = marker[n_source], label = labels[n_source], s = mark_size)
     
-    plt.title(title)
-    plt.legend()
-    plt.grid(True)
+    ax.set_title(title)
+    ax.legend()
+    ax.grid(True)
 
     ax.set_xticklabels(["10h", "8h", "6h", "4h", "2h", "0h", "22h", "20h", "18h", "16h", "14h"]);
     plt.show()
+
+    return ax
 
 
 def healpix_sky_map_ps1_cover_area(ra, dec, level):

@@ -9,4 +9,16 @@
 
 - Why x-ray survey cannot be conducted for high redshifts?
 
+- Look for better random number generator.
+- Check the randomness of the catalogs.
+
+- Understand the $\pi_{cutoff}$.
+
+- We can create a mock catalog with added signal to study the estimator.
+- Harten madau
+- internal estimator
+- Galaxy formation and evolution
+- norberg et al
+- gadget simulation
+- subaru, HST
 - 
