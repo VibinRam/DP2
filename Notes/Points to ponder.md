@@ -14,6 +14,9 @@
 
 - Understand the $\pi_{cutoff}$.
 
+
+-----------------------------------------------------------------------
+Chat with Anirban Chakroborthy NCRA
 - We can create a mock catalog with added signal to study the estimator.
 - Harten madau
 - internal estimator
@@ -21,4 +24,9 @@
 - norberg et al
 - gadget simulation
 - subaru, HST
-- 
+------------------------------------------------------------------------
+
+- Quasars have clustering strength similar to that of luminous galaxies at the same redshift. [Shaver 1984, Croom & Shanks 1996, Porciani, Magliocchetti & norberg 2004, hereafter PMN04, Croom et al. 2005]
+- See if clustering of luminous galaxies has been found at redshift 6.
+
+- quasars reside in galaxy overdensity regions.

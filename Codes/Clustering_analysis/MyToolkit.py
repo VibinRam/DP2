@@ -75,7 +75,7 @@ def plot_sky_map_ps1(ra, dec, labels, title = "Default title", mask = None, mark
     return ax
 
 
-def healpix_sky_map_ps1_cover_area(ra, dec, level):
+def healpix_sky_map_ps1_cover_area(ra, dec, level, title = "Mollweide view"):
     
     '''Give the ra and dec arrays of the source in any numpy readable
     format. level- is the level of healpix pixelation required'''
@@ -98,5 +98,5 @@ def healpix_sky_map_ps1_cover_area(ra, dec, level):
     pixels_with_data = np.shape(np.where(all_pixels != 0))[1]
     area_data_pixels = pixels_with_data * hp.nside2pixarea(nside, degrees=True)
 
-    hp.mollview(all_pixels)
-    return area_data_pixels
+    hp.mollview(all_pixels, title=title);
+    return area_data_pixels, all_pixels

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reproducing the Shen 2007 paper.md",
+                "file": "Paper reading/Pan-STARRS1.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
+                "file": "Reproducing the Shen 2007 paper.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,30 +159,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dab38c4799bbaf9c",
+  "active": "b8d780e70d3b0e30",
   "lastOpenFiles": [
-    "Points to ponder.md",
-    "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
-    "Possible papers to read.md",
-    "The.md",
     "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
-    "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
     "Reproducing the Shen 2007 paper.md",
-    "Steps to finding clustering.md",
     "Random memory pointers.md",
+    "PS1 footprint.md",
+    "PS1 data retrieval.md",
+    "PS1 Completeness.md",
+    "Possible papers to read.md",
+    "Points to ponder.md",
+    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
+    "Paper reading/Pan-STARRS1.md",
+    "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
+    "The.md",
+    "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
+    "Steps to finding clustering.md",
     "To Do.md",
     "Paper reading/Coil notes.md",
     "Paper reading/Quasar clustering.md",
-    "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
-    "Paper reading/Pan-STARRS1.md",
-    "PS1 Completeness.md",
     "Images/Pasted image 20230317115611.png",
     "Images/Pasted image 20230317120313.png",
     "Images/Pasted image 20230317150641.png",
     "Images/Pasted image 20230221173137.png",
     "Images/Pasted image 20230221172656.png",
-    "PS1 data retrieval.md",
-    "PS1 footprint.md",
     "Images/Pasted image 20230317154513.png",
     "Pasted image 20230317115532.png",
     "Paper reading/Quasar clustering z_6 Greiner.md",

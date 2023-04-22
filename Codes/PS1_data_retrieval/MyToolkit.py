@@ -93,4 +93,4 @@ def healpix_sky_map_ps1_cover_area(ra, dec, level):
     area_data_pixels = pixels_with_data * hp.nside2pixarea(nside, degrees=True)
 
     hp.mollview(all_pixels)
-    return area_data_pixels
+    return [area_data_pixels, all_pixels]

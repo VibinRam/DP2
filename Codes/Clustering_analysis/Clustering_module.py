@@ -118,23 +118,30 @@ def find_wp_rp_single_bin(ra, dec, red, file_name):
     xi_rp_masked = ma.array(xi_rp)
     xi_rp_masked[unfin_pos] = ma.masked
 
+    with np.errstate(divide='ignore', invalid='ignore'):
+        xi_rp_error = (1 + np.absolute(xi_rp))/np.sqrt(np.minimum(rp_hist, len(ra)))
+    xi_rp_error_masked = ma.array(xi_rp_error)
+    xi_rp_error_masked[unfin_pos] = ma.masked
+
     file = open(DP2_DIRECTORY + "Data/" + file_name + ".txt", 'w')
     file.write('   rp_mid       DD      RR      DR      xi_rp \n')
     for i in range(len(rp_mid)):
-        file.write(f'{rp_mid[i]:9.3f}   {rp_hist[i]:5d}    {rand_rp_hist[i]:5d}   {cross_rp_hist[i]:5d}   {xi_rp[i]:8.5f}\n')
+        file.write(f'{rp_mid[i]:9.3f}   {rp_hist[i]:5d}    {rand_rp_hist[i]:5d}   {cross_rp_hist[i]:5d}   {xi_rp[i]:8.5f}   {xi_rp_error[i]:8.5f}\n')
 
     #xi_rp = np.abs(xi_rp)
     #(rp_hist + rand_rp_hist - 2 * cross_rp_hist)/rand_rp_hist
     fig, ax = plt.subplots()
-    ax.plot(rp_mid, xi_rp_masked/rp_mid, '*--')
+    ax.errorbar(rp_mid, xi_rp_masked/rp_mid, xi_rp_error_masked/rp_mid, fmt = '*--')
     ax.set_ylabel(r'$w_p(r_p)/r_p$')
     ax.set_xlabel(r'$r_p (Mpc)$')
     ax.axhline(0, ls = '--', lw = 0.5, c = 'black')
 
     return ax
 
-def find_xi_s(ra, dec, red, file_name):
-    rand_ra, rand_dec, rand_red = make_rand_cat(len(ra))
+def find_xi_s(ra, dec, red, file_name, rand_ra = None, rand_dec = None, rand_red = None):
+
+    if((rand_ra is None) and (rand_dec is None) and (rand_red is None)):
+        rand_ra, rand_dec, rand_red = make_rand_cat(len(ra))
 
     s_array = find_s_bined(ra, dec, red)
     rand_s_array = find_s_bined(rand_ra, rand_dec, rand_red)
@@ -155,13 +162,18 @@ def find_xi_s(ra, dec, red, file_name):
     xi_s_masked = ma.array(xi_s)
     xi_s_masked[unfin_pos] = ma.masked
 
+    with np.errstate(divide='ignore', invalid='ignore'):
+        xi_s_error = (1 + np.absolute(xi_s))/np.sqrt(np.minimum(s_hist, len(ra)))
+    xi_s_masked_error = ma.array(xi_s_error)
+    xi_s_masked_error[unfin_pos] = ma.masked
+
     file = open(DP2_DIRECTORY + "Data/" + file_name + ".txt", 'w')
     file.write('   s_mid       DD      RR      DR      xi_s \n')
     for i in range(len(s_mid)):
-        file.write(f'{s_mid[i]:9.3f}   {s_hist[i]:5d}    {rand_s_hist[i]:5d}   {cross_s_hist[i]:5d}   {xi_s[i]:8.5f}\n')
+        file.write(f'{s_mid[i]:9.3f}   {s_hist[i]:5d}    {rand_s_hist[i]:5d}   {cross_s_hist[i]:5d}   {xi_s[i]:8.5f}   {xi_s_error[i]:8.5f}\n')
 
     fig, ax = plt.subplots()
-    ax.plot(s_mid, xi_s_masked, '*--')
+    ax.errorbar(s_mid, xi_s_masked, yerr = xi_s_masked_error, fmt = '*--')
     ax.set_ylabel(r'$xi(s)$')
     ax.set_xlabel(r'$s (Mpc)$')
     ax.axhline(0, ls = '--', lw = 0.5, c = 'black')
