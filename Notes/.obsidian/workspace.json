@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shinohara_Supermassive primordial black holes.md",
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Shinohara_Supermassive primordial black holes.md",
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Shinohara_Supermassive primordial black holes.md",
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shinohara_Supermassive primordial black holes.md"
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md"
               }
             }
           }
@@ -173,8 +173,8 @@
   },
   "active": "3c1d99e16dc195d7",
   "lastOpenFiles": [
-    "Reproducing the Shen 2007 paper.md",
     "Shinohara_Supermassive primordial black holes.md",
+    "Reproducing the Shen 2007 paper.md",
     "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Random memory pointers.md",
     "PS1 footprint.md",

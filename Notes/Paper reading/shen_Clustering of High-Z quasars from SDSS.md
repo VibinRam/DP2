@@ -7,7 +7,7 @@ WeFrom Shen et. al. 2007.
 	- $\gamma = 2.0 \pm 0.3$
 	- Scale range $4 \leq r_p \leq 150 h^{-1}Mpc$
 - For $z \approx 1.5$, $r_0 \approx 6.5 h^{-1}Mpc$
-- Sample is devided into two redshift bins assuming $\gamma = 2.0$:-
+- Sample is divided into two redshift bins assuming $\gamma = 2.0$:-
 - $2.9 \leq z \leq 3.5$:
 	- $r_0 = 16.9\pm 1.7h^{-1}Mpc$
 	- $Duty = 0.004 \sim 0.05$ 
