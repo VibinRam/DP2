@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3c1d99e16dc195d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Shinohara_Supermassive primordial black holes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reproducing the Shen 2007 paper.md",
+                "file": "Shinohara_Supermassive primordial black holes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Reproducing the Shen 2007 paper.md",
+                "file": "Shinohara_Supermassive primordial black holes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reproducing the Shen 2007 paper.md"
+                "file": "Shinohara_Supermassive primordial black holes.md"
               }
             }
           }
@@ -159,10 +171,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b8d780e70d3b0e30",
+  "active": "3c1d99e16dc195d7",
   "lastOpenFiles": [
-    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Reproducing the Shen 2007 paper.md",
+    "Shinohara_Supermassive primordial black holes.md",
+    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Random memory pointers.md",
     "PS1 footprint.md",
     "PS1 data retrieval.md",
