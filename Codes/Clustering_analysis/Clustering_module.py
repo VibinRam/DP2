@@ -52,13 +52,16 @@ def find_pi_rp(ra_col, dec_col, red_col, rand_ra_col = None, rand_dec_col = None
 
 def find_s_bined(ra_col, dec_col, red_col, rand_ra_col = None, rand_dec_col = None, rand_red_col = None):
 
+    self_pair = False
     if((rand_ra_col is None) and (rand_dec_col is None) and (rand_red_col is None)):
         rand_ra_col = ra_col
         rand_dec_col = dec_col
         rand_red_col = red_col
 
-    ps1_quasars1 = SkyCoord(ra_col*u.deg, dec_col*u.deg, cosmo.comoving_distance(red_col))
-    ps1_quasars2 = SkyCoord(rand_ra_col*u.deg, rand_dec_col*u.deg, cosmo.comoving_distance(rand_red_col))
+        self_pair = True
+
+    ps1_quasars1 = SkyCoord(ra_col*u.deg, dec_col*u.deg, cosmo.comoving_distance(red_col) * 0.71)
+    ps1_quasars2 = SkyCoord(rand_ra_col*u.deg, rand_dec_col*u.deg, cosmo.comoving_distance(rand_red_col) * 0.71)
     ps1_quasars1.representation_type = 'cartesian'
     ps1_quasars2.representation_type = 'cartesian'
     
@@ -73,12 +76,60 @@ def find_s_bined(ra_col, dec_col, red_col, rand_ra_col = None, rand_dec_col = No
     z1, z2 = np.meshgrid(z1, z2)
 
     s_array = np.sqrt(np.power(x2 - x1, 2) + np.power(y2 - y1, 2) + np.power(z2 - z1, 2))
-    s_array = s_array[np.triu_indices(len(s_array),k = 1)]
+
+    if(self_pair == True):
+        s_array = s_array[np.triu_indices(len(s_array),k = 1)]
+    else:
+        s_array = s_array.flatten()
 
     return s_array
     
+def find_s_binned_shadab(ra_col, dec_col, red_col, rand_ra_col = None, rand_dec_col = None, rand_red_col = None):
 
-def make_rand_cat(num):
+    if((rand_ra_col is None) and (rand_dec_col is None) and (rand_red_col is None)):
+        rand_ra_col = ra_col
+        rand_dec_col = dec_col
+        rand_red_col = red_col
+
+    theta = np.pi*(90 - dec_col)/180
+    phi = np.pi * ra_col / 180
+
+    rco = cosmo.comoving_distance(red_col).value * 0.71
+
+    x = rco * np.sin(theta) * np.cos(phi)
+    y = rco * np.sin(theta) * np.sin(phi)
+    z = rco * np.cos(theta)
+
+    x1, x2 = np.meshgrid(x, x)
+    y1, y2 = np.meshgrid(y, y)
+    z1, z2 = np.meshgrid(z, z)
+
+    s_array = np.sqrt(np.power(x2 - x1, 2) + np.power(y2 - y1, 2) + np.power(z2 - z1, 2))
+    s_array = s_array[np.triu_indices(len(s_array),k = 1)]
+
+    return s_array
+
+# def make_rand_from_dist(red_col, n_samples):
+#     bins = [2.901 + i*0.05 for i in range(50)]
+#     hist, edges = np.histogram(red_col, bins=bins)
+#     bin_widths = np.diff(edges)
+#     cdf = np.cumsum(hist * bin_widths) / np.sum(hist * bin_widths)
+#     #plt.stairs(cdf, bins)
+
+#     # Generate new z values that follow the histogram distribution
+#     uniform_values = np.random.rand(n_samples)
+#     bin_indices = np.searchsorted(cdf, uniform_values)
+#     bin_edges = edges[bin_indices-1]
+#     bin_diff = edges[bin_indices] - edges[bin_indices-1]
+#     bin_weights = (uniform_values - cdf[bin_indices-1]) / (cdf[bin_indices] - cdf[bin_indices-1])
+
+#     new_z_values = bin_edges + bin_weights * bin_diff
+
+#     return new_z_values
+
+def make_rand_cat(mult, red_col):
+    num = mult * len(red_col)
+
     ind = np.where(np.arange(num) > -1)
     rand_ra = np.zeros(num)
     rand_dec = np.zeros(num)
@@ -147,18 +198,17 @@ def find_xi_s(ra, dec, red, file_name, rand_ra = None, rand_dec = None, rand_red
     rand_s_array = find_s_bined(rand_ra, rand_dec, rand_red)
     cross_s_array = find_s_bined(ra, dec ,red, rand_ra_col=rand_ra, rand_dec_col=rand_dec, rand_red_col=rand_red)
 
-    s_bins = np.float_power(10, np.arange(43)*0.1)
+    s_bins = np.logspace(start=np.log10(1.9868), stop=np.log10(314.915), num=23)
     s_mid = (s_bins[:-1] + s_bins[1:])/2
 
-    s_hist = (plt.hist(s_array, s_bins)[0]).astype(int)
-    rand_s_hist = (plt.hist(rand_s_array, s_bins)[0]).astype(int)
-    cross_s_hist = (plt.hist(cross_s_array, s_bins)[0]).astype(int)
-    plt.close()
+    s_hist = (np.histogram(s_array, s_bins)[0]).astype(int)
+    rand_s_hist = (np.histogram(rand_s_array, s_bins)[0]).astype(int)
+    cross_s_hist = (np.histogram(cross_s_array, s_bins)[0]).astype(int)
 
     unfin_pos = np.where(s_hist * rand_s_hist * cross_s_hist == 0)
 
     with np.errstate(divide='ignore', invalid='ignore'):
-        xi_s = (s_hist - 2 * cross_s_hist + rand_s_hist)/rand_s_hist
+        xi_s = (s_hist/len(s_array) - 2 * cross_s_hist/len(rand_s_array) + rand_s_hist/len(cross_s_array))/(rand_s_hist/len(rand_s_array))
     xi_s_masked = ma.array(xi_s)
     xi_s_masked[unfin_pos] = ma.masked
 
@@ -171,11 +221,12 @@ def find_xi_s(ra, dec, red, file_name, rand_ra = None, rand_dec = None, rand_red
     file.write('   s_mid       DD      RR      DR      xi_s \n')
     for i in range(len(s_mid)):
         file.write(f'{s_mid[i]:9.3f}   {s_hist[i]:5d}    {rand_s_hist[i]:5d}   {cross_s_hist[i]:5d}   {xi_s[i]:8.5f}   {xi_s_error[i]:8.5f}\n')
+    file.close()
 
     fig, ax = plt.subplots()
-    ax.errorbar(s_mid, xi_s_masked, yerr = xi_s_masked_error, fmt = '*--')
+    ax.errorbar(s_mid, xi_s_masked, yerr = xi_s_masked_error, fmt = '*', label="reporduction")
     ax.set_ylabel(r'$xi(s)$')
     ax.set_xlabel(r'$s (Mpc)$')
     ax.axhline(0, ls = '--', lw = 0.5, c = 'black')
 
-    return ax
+    return fig, ax
