@@ -23,3 +23,10 @@
 - **Random pixels are selected**: Random pixels are selected from this high resolution map, in order to assign the random sources.
 - **Converted the random pixels to a random ra and dec**: This gives the random catalog.
 
+### Selection function from Richards et al 2006
+- Throughout this paper we use a  cosmology with m ¼  
+0:3,  ¼ 0:7, a Hubble constant of H0 ¼ 70 km s1 Mpc1  
+(e.g., Spergel et al. 2003), and luminosity distances determined  
+according to Hogg (1999) for this cosmology.
+- 
+

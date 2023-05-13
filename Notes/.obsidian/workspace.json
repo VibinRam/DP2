@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "99a3f68ed135fad4",
+        "id": "0135a1c0a2b484bc",
         "type": "tabs",
         "children": [
           {
-            "id": "dab38c4799bbaf9c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper reading/Pan-STARRS1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b8d780e70d3b0e30",
+            "id": "776f4e48b363c9af",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,33 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "3c1d99e16dc195d7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Steps to finding clustering.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9960d3445279f7a0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper reading/Quasar clustering z_6 Greiner.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -101,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "1242f3803c8db306",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -122,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper reading/Quasar clustering z_6 Greiner.md",
+                "file": "Reproducing the Shen 2007 paper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper reading/Quasar clustering z_6 Greiner.md",
+                "file": "Reproducing the Shen 2007 paper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper reading/Quasar clustering z_6 Greiner.md"
+                "file": "Reproducing the Shen 2007 paper.md"
               }
             }
           }
@@ -183,9 +154,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9960d3445279f7a0",
+  "active": "776f4e48b363c9af",
   "lastOpenFiles": [
     "Alternative cluster finding.md",
+    "Paper reading/Shinohara_Supermassive primordial black holes.md",
+    "Paper reading/Quasar clustering z_6 Greiner.md",
     "Quasar clustering.md",
     "Random memory pointers.md",
     "Steps to finding clustering.md",
@@ -198,7 +171,6 @@
     "PS1 Completeness.md",
     "Possible papers to read.md",
     "Points to ponder.md",
-    "Paper reading/Shinohara_Supermassive primordial black holes.md",
     "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
     "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Reproducing the Shen 2007 paper.md",
@@ -214,7 +186,6 @@
     "Images/Pasted image 20230221172656.png",
     "Images/Pasted image 20230317154513.png",
     "Pasted image 20230317115532.png",
-    "Paper reading/Quasar clustering z_6 Greiner.md",
     "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
     "Group meeting Papers/DESI z geq 5. 400 new quasars..md",
     "Paper reading/Banados_ps1_z_5.6_Q_survey.md",
