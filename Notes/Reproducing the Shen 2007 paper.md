@@ -22,6 +22,7 @@
 - **Increase the map resolution**: Increase the number of pixels in the effective survey area by upscaling the resolution of the HealPix map.
 - **Random pixels are selected**: Random pixels are selected from this high resolution map, in order to assign the random sources.
 - **Converted the random pixels to a random ra and dec**: This gives the random catalog.
+- Made a random distribution of z that follows the same distribution as the data distribution using inverse transform sampling.
 
 ### Selection function from Richards et al 2006
 - Throughout this paper we use a  cosmology with m ¼  

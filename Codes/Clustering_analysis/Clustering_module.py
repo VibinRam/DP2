@@ -6,6 +6,7 @@ from astropy.coordinates import SkyCoord, Distance
 from astropy.cosmology import LambdaCDM as LCDM
 from MyToolkit import *
 import numpy.ma as ma
+from Corrfunc.theory.DD import DD
 
 DP2_DIRECTORY = "/home/vibin/MyFolder/WorkDesk/DP2/"
 
@@ -49,6 +50,39 @@ def find_pi_rp(ra_col, dec_col, red_col, rand_ra_col = None, rand_dec_col = None
 
     return pi_array, rp_array
     #return v1_sq, v2_sq, v1_v2
+
+def pair_count_corrfunc(ra_col, dec_col, red_col, bins, rand_ra_col = None, rand_dec_col = None, rand_red_col = None):
+
+    np.set_printoptions(suppress=True)
+
+    autocorr = 0
+
+    quasar_cord = SkyCoord(ra_col*u.deg, dec_col*u.deg, cosmo.comoving_distance(red_col) * 0.71)
+    quasar_cord.representation_type = 'cartesian'
+    x1 = np.array(quasar_cord.x)
+    y1 = np.array(quasar_cord.y)
+    z1 = np.array(quasar_cord.z)
+
+    if((rand_ra_col is None) and (rand_dec_col is None) and (rand_red_col is None)):
+        autocorr = 1
+
+        results_DD = DD(autocorr, nthreads=1, binfile=bins, X1=x1, Y1=y1, Z1=z1, periodic=False)
+        results_DD = np.array(list(map(list, results_DD)))
+        results_DD[:, 3] = results_DD[:, 3]/2
+
+        return results_DD
+
+    quasar_cord2 = SkyCoord(rand_ra_col*u.deg, rand_dec_col*u.deg, cosmo.comoving_distance(rand_red_col) * 0.71)
+    quasar_cord2.representation_type = 'cartesian'
+    x2 = np.array(quasar_cord2.x)
+    y2 = np.array(quasar_cord2.y)
+    z2 = np.array(quasar_cord2.z)
+
+    results_DD = DD(autocorr, nthreads=1, binfile=bins, X1=x1, Y1=y1, Z1=z1, X2=x2, Y2=y2, Z2=z2, periodic=False)
+    results_DD = np.array(list(map(list, results_DD)))
+    
+    return results_DD
+
 
 def find_s_bined(ra_col, dec_col, red_col, rand_ra_col = None, rand_dec_col = None, rand_red_col = None):
 
@@ -189,26 +223,32 @@ def find_wp_rp_single_bin(ra, dec, red, file_name):
 
     return ax
 
-def find_xi_s(ra, dec, red, file_name, rand_ra = None, rand_dec = None, rand_red = None):
+def find_xi_s(ra, dec, red, s_bins, file_name, rand_ra = None, rand_dec = None, rand_red = None, draw_ax = None):
 
     if((rand_ra is None) and (rand_dec is None) and (rand_red is None)):
         rand_ra, rand_dec, rand_red = make_rand_cat(len(ra))
 
-    s_array = find_s_bined(ra, dec, red)
-    rand_s_array = find_s_bined(rand_ra, rand_dec, rand_red)
-    cross_s_array = find_s_bined(ra, dec ,red, rand_ra_col=rand_ra, rand_dec_col=rand_dec, rand_red_col=rand_red)
+    # s_array = find_s_bined(ra, dec, red)
+    # rand_s_array = find_s_bined(rand_ra, rand_dec, rand_red)
+    # cross_s_array = find_s_bined(ra, dec ,red, rand_ra_col=rand_ra, rand_dec_col=rand_dec, rand_red_col=rand_red)
 
-    s_bins = np.logspace(start=np.log10(1.9868), stop=np.log10(314.915), num=23)
     s_mid = (s_bins[:-1] + s_bins[1:])/2
 
-    s_hist = (np.histogram(s_array, s_bins)[0]).astype(int)
-    rand_s_hist = (np.histogram(rand_s_array, s_bins)[0]).astype(int)
-    cross_s_hist = (np.histogram(cross_s_array, s_bins)[0]).astype(int)
+    # s_hist = (np.histogram(s_array, s_bins)[0]).astype(int)
+    # rand_s_hist = (np.histogram(rand_s_array, s_bins)[0]).astype(int)
+    # cross_s_hist = (np.histogram(cross_s_array, s_bins)[0]).astype(int)
+
+    s_hist = (pair_count_corrfunc(ra, dec, red, s_bins)[:,3]).astype(int)
+    rand_s_hist = (pair_count_corrfunc(rand_ra, rand_dec, rand_red, s_bins)[:,3]).astype(int)
+    cross_s_hist = (pair_count_corrfunc(ra, dec, red, s_bins, rand_ra_col=rand_ra, rand_dec_col=rand_dec, rand_red_col=rand_red)[:,3]).astype(int)
+    s_hist_norm = (len(ra) * (len(ra) - 1))/2
+    rand_hist_norm = (len(rand_ra) * (len(rand_ra) - 1))/2
+    cross_hist_norm = len(ra) * len(rand_ra)
 
     unfin_pos = np.where(s_hist * rand_s_hist * cross_s_hist == 0)
 
     with np.errstate(divide='ignore', invalid='ignore'):
-        xi_s = (s_hist/len(s_array) - 2 * cross_s_hist/len(rand_s_array) + rand_s_hist/len(cross_s_array))/(rand_s_hist/len(rand_s_array))
+        xi_s = (s_hist/s_hist_norm - 2 * cross_s_hist/cross_hist_norm + rand_s_hist/rand_hist_norm)/(rand_s_hist/rand_hist_norm)
     xi_s_masked = ma.array(xi_s)
     xi_s_masked[unfin_pos] = ma.masked
 
@@ -223,10 +263,18 @@ def find_xi_s(ra, dec, red, file_name, rand_ra = None, rand_dec = None, rand_red
         file.write(f'{s_mid[i]:9.3f}   {s_hist[i]:5d}    {rand_s_hist[i]:5d}   {cross_s_hist[i]:5d}   {xi_s[i]:8.5f}   {xi_s_error[i]:8.5f}\n')
     file.close()
 
-    fig, ax = plt.subplots()
-    ax.errorbar(s_mid, xi_s_masked, yerr = xi_s_masked_error, fmt = '*', label="reporduction")
+
+    if draw_ax is not None:
+        fig = None
+        ax = draw_ax
+    else:
+        fig, ax = plt.subplots()
+    ax.errorbar(s_mid, xi_s_masked, yerr = xi_s_masked_error, fmt = 'b*', label="reporduction")
     ax.set_ylabel(r'$xi(s)$')
     ax.set_xlabel(r'$s (Mpc)$')
     ax.axhline(0, ls = '--', lw = 0.5, c = 'black')
+    ax.set_xscale('log')
+    ax.set_yscale('log')
+    ax.set_ylim(0.001, 100)
 
     return fig, ax
