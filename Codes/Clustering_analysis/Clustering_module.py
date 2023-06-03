@@ -7,6 +7,7 @@ from astropy.cosmology import LambdaCDM as LCDM
 from MyToolkit import *
 import numpy.ma as ma
 from Corrfunc.theory.DD import DD
+import scipy.optimize as spopt
 
 DP2_DIRECTORY = "/home/vibin/MyFolder/WorkDesk/DP2/"
 
@@ -161,7 +162,7 @@ def find_s_binned_shadab(ra_col, dec_col, red_col, rand_ra_col = None, rand_dec_
 
 #     return new_z_values
 
-def make_rand_cat(mult, red_col):
+def make_rand_cat_ps1(mult, red_col):
     num = mult * len(red_col)
 
     ind = np.where(np.arange(num) > -1)
@@ -171,17 +172,21 @@ def make_rand_cat(mult, red_col):
         ### using Archimede's theorem
         rand_ra[ind] = np.random.uniform(0, 360, len(ind[0]))
         rand_dec[ind] = np.degrees(np.arcsin(np.random.uniform(-0.5, 1, len(ind[0]))))
-        ind = np.where(np.absolute(np.arcsin(np.cos(np.radians(rand_dec)) * np.cos(np.radians(27.4)) * np.cos(np.radians(rand_ra - 192.25)) \
-                                            + np.sin(np.radians(rand_dec)) * np.sin(np.radians(27.4)))) < np.radians(20))
+        ind = np.where((np.absolute(np.arcsin(np.cos(np.radians(rand_dec)) * np.cos(np.radians(27.4)) * np.cos(np.radians(rand_ra - 192.25)) \
+                                            + np.sin(np.radians(rand_dec)) * np.sin(np.radians(27.4)))) < np.radians(20)) | ((rand_ra > 7) & (rand_ra < 14)\
+                                                & (rand_dec > 37) & (rand_dec < 43)))
+
         if(len(ind[0]) == 0):
             break
 
-    rand_red = np.random.uniform(5.7, 6.2, num)
+    step = 0.05
+    bins = np.arange(np.min(red_col), np.max(red_col) + step, step)
+    rand_red = make_rand_from_dist_any(red_col, bins, num)
 
     return rand_ra, rand_dec, rand_red
 
 def find_wp_rp_single_bin(ra, dec, red, file_name):
-    rand_ra, rand_dec, rand_red = make_rand_cat(len(ra))
+    rand_ra, rand_dec, rand_red = make_rand_cat_ps1(len(ra))
 
     pi_array, rp_array = find_pi_rp(ra, dec, red)
     rand_pi_array, rand_rp_array = find_pi_rp(rand_ra, rand_dec, rand_red)
@@ -223,10 +228,10 @@ def find_wp_rp_single_bin(ra, dec, red, file_name):
 
     return ax
 
-def find_xi_s(ra, dec, red, s_bins, file_name, rand_ra = None, rand_dec = None, rand_red = None, draw_ax = None):
+def find_xi_s(ra, dec, red, s_bins, file_name, rand_ra = None, rand_dec = None, rand_red = None, draw_ax = None, extra=False, fit=False, ret_result=False):
 
     if((rand_ra is None) and (rand_dec is None) and (rand_red is None)):
-        rand_ra, rand_dec, rand_red = make_rand_cat(len(ra))
+        raise ValueError
 
     # s_array = find_s_bined(ra, dec, red)
     # rand_s_array = find_s_bined(rand_ra, rand_dec, rand_red)
@@ -258,23 +263,78 @@ def find_xi_s(ra, dec, red, s_bins, file_name, rand_ra = None, rand_dec = None, 
     xi_s_masked_error[unfin_pos] = ma.masked
 
     file = open(DP2_DIRECTORY + "Data/" + file_name + ".txt", 'w')
-    file.write('   s_mid       DD      RR      DR      xi_s \n')
+    file.write('  s_mid       DD      RR      DR      xi_s     Delta xi_s\n')
     for i in range(len(s_mid)):
-        file.write(f'{s_mid[i]:9.3f}   {s_hist[i]:5d}    {rand_s_hist[i]:5d}   {cross_s_hist[i]:5d}   {xi_s[i]:8.5f}   {xi_s_error[i]:8.5f}\n')
+        file.write(f'{s_mid[i]:9.3f}   {s_hist[i]:5d}    {rand_s_hist[i]:5d}   {cross_s_hist[i]:5d}   {xi_s_masked[i]:8.5f}   {xi_s_masked_error[i]:8.5f}\n')
     file.close()
-
 
     if draw_ax is not None:
         fig = None
         ax = draw_ax
+    elif extra:
+        fig, (ax, ax2) = plt.subplots(1,2, figsize= (15,5))
+        ax2.errorbar(s_mid, xi_s_masked, yerr = xi_s_masked_error, fmt='sb', ms=5, label="This Work")
+        ax2.set_ylabel(r'$\xi(s)$')
+        ax2.set_xlabel(r'$s (h^{-1}Mpc)$')
+        ax2.set_xscale('log')
+        ax2.set_yscale('log')
+        ax2.set_ylim(0.001, 100)
     else:
         fig, ax = plt.subplots()
-    ax.errorbar(s_mid, xi_s_masked, yerr = xi_s_masked_error, fmt = 'b*', label="reporduction")
-    ax.set_ylabel(r'$xi(s)$')
-    ax.set_xlabel(r'$s (Mpc)$')
+    ax.errorbar(s_mid, xi_s_masked, yerr = xi_s_masked_error, fmt='sb', capsize=5, ms=5, label="This Work")
+    ax.set_ylabel(r'$\xi(s)$')
+    ax.set_xlabel(r'$s (h^{-1}Mpc)$')
     ax.axhline(0, ls = '--', lw = 0.5, c = 'black')
     ax.set_xscale('log')
     ax.set_yscale('log')
     ax.set_ylim(0.001, 100)
 
+    if fit:
+        def pow_fun(s, s0, delta):
+            return np.power(s/s0, -delta)
+        pow_fun_vec = np.vectorize(pow_fun)
+        s_val_to_fit = s_mid[~xi_s_masked.mask]
+        xi_val_to_fit = np.array(xi_s_masked[~xi_s_masked.mask])
+        loca = np.where(xi_val_to_fit > 0)
+        pars, cov = spopt.curve_fit(pow_fun, s_val_to_fit[loca], xi_val_to_fit[loca], p0=[1,1])
+        print(xi_val_to_fit[loca])
+        
+        fit_values = pow_fun(s_mid, pars[0], pars[1])
+        ax2.plot(s_mid, fit_values, '--', label="Power law fit")
+        # ax.plot(s_mid, fit_values, '--')
+
+        ax2.text(1000, 10, r"$s_0 = $"+str(np.round(pars[0],2)), c='red', fontsize=14)
+        ax2.text(1000, 4, r"$\delta = $"+str(np.round(pars[1],2)), c='red', fontsize=14)
+
+    if extra:
+        return fig, (ax, ax2)
+    
+    if ret_result:
+        return s_mid, xi_s_masked, xi_s_masked_error
+
     return fig, ax
+
+
+def make_rand_from_dist_any(red_col, bins, n_samples):            #Make a random z distribution from the data z distribution
+    hist, edges = np.histogram(red_col, bins=bins)
+    bin_widths = np.diff(edges)
+    cdf = np.cumsum(hist * bin_widths) / np.sum(hist * bin_widths)
+    cdf = np.insert(cdf, 0, 0)
+    #plt.stairs(cdf, bins)
+
+    # Generate new z values that follow the histogram distribution
+    uniform_values = np.random.rand(n_samples)
+    bin_indices = np.searchsorted(cdf, uniform_values)
+    bin_edges = edges[bin_indices-1]
+    bin_diff = edges[bin_indices] - edges[bin_indices-1]
+    bin_weights = (uniform_values - cdf[bin_indices-1]) / (cdf[bin_indices] - cdf[bin_indices-1])
+
+    new_z_values = bin_edges + bin_weights * bin_diff
+
+    ##---------------------------------------------
+    ## Making changes to see how clustering changes
+    #new_z_values = np.random.uniform(2.9, 3.5, n_samples)
+    #new_z_values[300:] = new_z_values[300:] * 1.01
+    ##
+
+    return new_z_values

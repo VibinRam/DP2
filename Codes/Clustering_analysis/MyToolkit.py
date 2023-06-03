@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import healpy as hp
 from astropy.coordinates import SkyCoord
-
+from astropy.visualization import astropy_mpl_style
 
 
 def range_wrapper(arr):
@@ -70,6 +70,7 @@ def plot_sky_map_ps1(ra, dec, labels, title = "Default title", mask = None, mark
     ax.grid(True)
 
     ax.set_xticklabels(["10h", "8h", "6h", "4h", "2h", "0h", "22h", "20h", "18h", "16h", "14h"]);
+    #plt.style.use(astropy_mpl_style)
     plt.show()
 
     return ax
