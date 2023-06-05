@@ -310,7 +310,7 @@ def find_xi_s(ra, dec, red, s_bins, file_name, rand_ra = None, rand_dec = None, 
         return fig, (ax, ax2)
     
     if ret_result:
-        return s_mid, xi_s_masked, xi_s_masked_error
+        return s_mid, xi_s_masked, xi_s_masked_error, s_hist, rand_s_hist, cross_s_hist
 
     return fig, ax
 
