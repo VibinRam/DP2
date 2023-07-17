@@ -61,14 +61,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "To Do.md",
+                "file": "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "93c7a7282760db76",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -142,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "To Do.md",
+                "file": "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "To Do.md",
+                "file": "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "To Do.md"
+                "file": "Paper reading/2D k-th nearest neighbor statistics- Yuan.md"
               }
             }
           }
@@ -203,8 +215,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d2e263e0575c6e8b",
+  "active": "93c7a7282760db76",
   "lastOpenFiles": [
+    "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
+    "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
+    "To Do.md",
     "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Paper reading/Pan-STARRS1.md",
     "Reproducing the Shen 2007 paper.md",
@@ -214,7 +229,6 @@
     "PS1 footprint.md",
     "PS1 data retrieval.md",
     "Steps to finding clustering.md",
-    "To Do.md",
     "Points to ponder.md",
     "Possible papers to read.md",
     "PS1 Completeness.md",
@@ -227,7 +241,6 @@
     "Terminology and Def/Matter power spectrum.md",
     "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
     "The.md",
-    "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
     "Images/Pasted image 20230317115611.png",
     "Images/Pasted image 20230317120313.png",
     "Images/Pasted image 20230317150641.png",
@@ -237,7 +250,6 @@
     "Pasted image 20230317115532.png",
     "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
     "Group meeting Papers/DESI z geq 5. 400 new quasars..md",
-    "Paper reading/Banados_ps1_z_5.6_Q_survey.md",
     "Paper draft"
   ]
 }
