@@ -8,6 +8,7 @@ import numpy.ma as ma
 from Corrfunc.theory.DD import DD
 import scipy.optimize as spopt
 from astropy.visualization import astropy_mpl_style
+import healpy as hp
 
 DP2_DIRECTORY = "/home/vibin/MyFolder/WorkDesk/DP2/"
 
