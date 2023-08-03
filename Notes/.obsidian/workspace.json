@@ -73,14 +73,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
+                "file": "Paper reading/Pan-STARRS1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ce277b9e1a8ed56e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Euclid mission.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -154,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
+                "file": "Euclid mission.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
+                "file": "Euclid mission.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper reading/2D k-th nearest neighbor statistics- Yuan.md"
+                "file": "Euclid mission.md"
               }
             }
           }
@@ -215,14 +227,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "93c7a7282760db76",
+  "active": "ce277b9e1a8ed56e",
   "lastOpenFiles": [
+    "Alternative cluster finding.md",
+    "Images/Pasted image 20230728100145.png",
+    "Euclid mission.md",
     "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
+    "Paper reading/Pan-STARRS1.md",
+    "Images/Pasted image 20230727191619.png",
+    "Images/Pasted image 20230727191654.png",
+    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+    "Reproducing the Shen 2007 paper.md",
     "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
     "To Do.md",
-    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
-    "Paper reading/Pan-STARRS1.md",
-    "Reproducing the Shen 2007 paper.md",
     "Paper reading/Coil notes.md",
     "Quasar clustering.md",
     "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
@@ -233,7 +250,6 @@
     "Possible papers to read.md",
     "PS1 Completeness.md",
     "Random memory pointers.md",
-    "Alternative cluster finding.md",
     "Paper reading/Shinohara_Supermassive primordial black holes.md",
     "Paper reading/Quasar clustering z_6 Greiner.md",
     "Terminology and Def/threshold bias models.md",
@@ -248,8 +264,6 @@
     "Images/Pasted image 20230221172656.png",
     "Images/Pasted image 20230317154513.png",
     "Pasted image 20230317115532.png",
-    "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
-    "Group meeting Papers/DESI z geq 5. 400 new quasars..md",
     "Paper draft"
   ]
 }
