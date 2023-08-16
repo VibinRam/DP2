@@ -8,3 +8,11 @@ $$(\frac{DD \hspace{0.2cm}RR}{DR^2} - 1)$$
 $$\xi(r) = \frac{\langle DD \rangle_r - 2\langle DR \rangle_r + \langle RR \rangle_r}{\langle RR \rangle_r}$$
 $$\xi_{quasars} = b^2\xi_{dark\hspace{0.1cm}matter}$$
 $$\xi(s) = \frac{s}{s_0}^{-\delta}$$
+
+Read 1 and 2 chapters of galaxy formation and evolution
+completeness and luminosity
+forward model
+Borg - paper, galaxy clustering. Field level measurements. Bayesian forward modelling. Borg algorithm.
+See if panstarrs is paper worthy.
+How clustering evolve with redshift.
+

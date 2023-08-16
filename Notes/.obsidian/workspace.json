@@ -85,14 +85,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Euclid mission.md",
+                "file": "To Do.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a217191c372288c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cb0b737c5c8d7c64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -166,7 +190,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Euclid mission.md",
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +207,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Euclid mission.md",
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +230,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Euclid mission.md"
+                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md"
               }
             }
           }
@@ -227,19 +251,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ce277b9e1a8ed56e",
+  "active": "cb0b737c5c8d7c64",
   "lastOpenFiles": [
+    "Optimising the clustering parameters.md",
+    "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
+    "Paper reading/LSST science book sec.10.3.md",
+    "Paper reading/Pan-STARRS1.md",
+    "Paper reading/Quasar clustering z_6 Greiner.md",
+    "Euclid mission.md",
+    "To Do.md",
     "Alternative cluster finding.md",
     "Images/Pasted image 20230728100145.png",
-    "Euclid mission.md",
     "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
-    "Paper reading/Pan-STARRS1.md",
     "Images/Pasted image 20230727191619.png",
     "Images/Pasted image 20230727191654.png",
     "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Reproducing the Shen 2007 paper.md",
     "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
-    "To Do.md",
     "Paper reading/Coil notes.md",
     "Quasar clustering.md",
     "Paper reading/Schindler PS1 z _ 5.6 Quasr Survey.md",
@@ -251,12 +279,9 @@
     "PS1 Completeness.md",
     "Random memory pointers.md",
     "Paper reading/Shinohara_Supermassive primordial black holes.md",
-    "Paper reading/Quasar clustering z_6 Greiner.md",
     "Terminology and Def/threshold bias models.md",
     "Terminology and Def/Terms to understand.md",
     "Terminology and Def/Matter power spectrum.md",
-    "Group meeting Papers/z - 4, Strong clustering of galaxies in Quasar Env.md",
-    "The.md",
     "Images/Pasted image 20230317115611.png",
     "Images/Pasted image 20230317120313.png",
     "Images/Pasted image 20230317150641.png",

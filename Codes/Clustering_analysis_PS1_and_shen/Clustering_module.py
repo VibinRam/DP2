@@ -23,7 +23,7 @@ def range_wrapper(arr):
     arr = -arr
     return arr
 
-def plot_sky_map_ps1(ra, dec, labels, title = "Default title", mask = None, mark_size = 30):
+def plot_sky_map_ps1(ra, dec, labels = None, title = "Default title", mask = None, mark_size = 30):
 
     '''Give right ascension in array of decimal degrees (0 deg to 360 deg)
         and declination in array of decimal degrees (-90 deg to 90 deg)'''
@@ -31,6 +31,7 @@ def plot_sky_map_ps1(ra, dec, labels, title = "Default title", mask = None, mark
     if (mask == None):
         mask = np.zeros_like(ra, dtype='int')
         mask = np.insert(mask, 0, 1)
+        labels = ['Default label']
 
     ### Plots the lines marking the excluded area of the galactic plane
     gal_l = np.linspace(0, 360, 1000)
