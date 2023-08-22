@@ -45,7 +45,7 @@ WeFrom Shen et. al. 2007.
 ### Redshift space correlation function
 
 - Redshift space is where distances are obtained from redshift without any corrections for peculiar velocity of redshift errors.
-- Redshift space correlation function[Landy & Szalay(1993)](https://ui.adsabs.harvard.edu/abs/1993ApJ...412...64L/abstract)$$\xi(s) = \frac{\langle DD\rangle - 2\langle DR \rangle + \langle RR \rangle}{\langle RR\rangle}$$
+- Redshift space correlation function[Landy & Szalay(1993)](https://ui.adsabs.harvard.edu/abs/1993ApJ...412...64L/abstract)$$\xi(r) = \frac{\langle DD\rangle - 2\langle DR \rangle + \langle RR \rangle}{\langle RR\rangle}$$
 - **Jackknife d10**:  10 spatially contiguous subsambles are made from the data sets and jackknife samples are created by omitting each of these samples in turn and mean of the number of data points in bin $s$ for each jackknife samble is taken as $DD_{mean}$, used in place of $\langle DD \rangle$. Covaraince matrix is calculated as,$$Cov(\xi_i,\xi_j) = \frac{N-1}{N}\sum^N_{l=1} (\xi_i^l - \bar\xi_i)(\xi_j^l - \bar\xi_j)$$
 - **Poisson error estimator**: 
 
@@ -74,7 +74,7 @@ WeFrom Shen et. al. 2007.
 - Assuming a $t_Q$, we can compute $M_{min}$ from equation of $\Phi(z)$.
 - $M_{min}$ gives $b_{eff}(M_{min},z)$. $$b_{eff}(M_{min},z) = \int_{M{min}}^\infty dM\frac{b(M,z)n(M,z)}{t_H(M,z)}\left[\int_{M_{min}}^\infty dM\frac{n(M,z)}{t_H(M,z)}\right]^{-1}$$
 - $b(M,z)$ from [Jing (1998)]
-- $$\xi_{model}(r,z) = b_{eff}^2\xi_m(r,z) = b_{eff}^2\xi_{m}(r)D^2(z)$$$\xi_{m}(r)$ is the present-day mass correlatioin function. $$\xi_m(r) = \frac{1}{2\pi^2}\int_0^\infty dk k^2P(k)\frac{\sin kr}{kr}$$$D(z)$ is the linear growth factor of fluctuations.
+- $$\xi_{quasars}(r,z) = b_{eff}^2\xi_m(r,z) = b_{eff}^2\xi_{m}(r)D^2(z)$$$\xi_{m}(r)$ is the present-day mass correlatioin function. $$\xi_m(r) = \frac{1}{2\pi^2}\int_0^\infty dk k^2P(k)\frac{\sin kr}{kr}$$$D(z)$ is the linear growth factor of fluctuations.
 - Averaging over certain redshift range,$$\bar\xi(r) = \frac{\int dV_c n^2_{QSO}(z)\xi_{model}(r,z)}{\int dV_c n^2_{QSO}(z)}$$
 - Iterate to find $t_Q$ which minimizes the difference between $\bar\xi(r)$ and $\xi(r)$. In practice use $\xi_{20}$.[Table 5, Shen et al. (2006)] $$\xi_{20} = \frac{3}{r^3_{max}}\int_{r_{min}}^{r_{max}}\xi(r)r^2dr$$$$\xi_{20} = \frac{3r_0^\gamma}{(3-\gamma)r^3_{max}}(r_{max}^{3-\gamma}-r_{min}^{3-\gamma})$$$r_{min} = 5h^{-1}Mpc$ and $r_{max} = 20h^{-1}Mpc$.
 

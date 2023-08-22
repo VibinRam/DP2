@@ -16,3 +16,10 @@ Borg - paper, galaxy clustering. Field level measurements. Bayesian forward mode
 See if panstarrs is paper worthy.
 How clustering evolve with redshift.
 
+
+In the clustering simulator, check how the pair separation of pairs which are not connected buy a random jump is distributed. We can look at the distribution of many lengths in this scenario to get a deeper understanding.
+What is the difference between angular correlation function and projected correlation function.
+Gaussian kernel smoothing. 
+
+
+

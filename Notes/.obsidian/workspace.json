@@ -109,14 +109,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+                "file": "To Do.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fd5b791fc61e8eb2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Literature review for Completeness/Literature review.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -190,7 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+                "file": "Literature review for Completeness/Literature review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +219,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
+                "file": "Literature review for Completeness/Literature review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -230,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper reading/shen_Clustering of High-Z quasars from SDSS.md"
+                "file": "Literature review for Completeness/Literature review.md"
               }
             }
           }
@@ -251,22 +263,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cb0b737c5c8d7c64",
+  "active": "fd5b791fc61e8eb2",
   "lastOpenFiles": [
+    "To Do.md",
+    "Literature review for Completeness/Literature review.md",
+    "Points to ponder.md",
+    "Reproducing the Shen 2007 paper.md",
+    "Literature review for Completeness",
+    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
     "Optimising the clustering parameters.md",
     "Paper reading/Laurent Clustering SDSS_IV eBOSS.md",
     "Paper reading/LSST science book sec.10.3.md",
     "Paper reading/Pan-STARRS1.md",
     "Paper reading/Quasar clustering z_6 Greiner.md",
     "Euclid mission.md",
-    "To Do.md",
     "Alternative cluster finding.md",
     "Images/Pasted image 20230728100145.png",
     "Paper reading/Banados_2016_ps1_z_g5.6_Q_survey.md",
     "Images/Pasted image 20230727191619.png",
     "Images/Pasted image 20230727191654.png",
-    "Paper reading/shen_Clustering of High-Z quasars from SDSS.md",
-    "Reproducing the Shen 2007 paper.md",
     "Paper reading/2D k-th nearest neighbor statistics- Yuan.md",
     "Paper reading/Coil notes.md",
     "Quasar clustering.md",
@@ -274,14 +289,11 @@
     "PS1 footprint.md",
     "PS1 data retrieval.md",
     "Steps to finding clustering.md",
-    "Points to ponder.md",
     "Possible papers to read.md",
     "PS1 Completeness.md",
     "Random memory pointers.md",
     "Paper reading/Shinohara_Supermassive primordial black holes.md",
     "Terminology and Def/threshold bias models.md",
-    "Terminology and Def/Terms to understand.md",
-    "Terminology and Def/Matter power spectrum.md",
     "Images/Pasted image 20230317115611.png",
     "Images/Pasted image 20230317120313.png",
     "Images/Pasted image 20230317150641.png",
